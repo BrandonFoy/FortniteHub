@@ -1,15 +1,12 @@
 from django.db import models
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-
+from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
     class Meta(object):
         db_table = 'post'
 
     name = models.CharField(
-        'Name', blank=False, null=False, max_length=14, db_index=True, default='Anonymous'
+        'Name', blank=False, null=False, max_length=50, db_index=True, default='Anonymous'
     )
     body = models.CharField(
         'Body', blank=False, null=False, max_length=140, db_index=True,

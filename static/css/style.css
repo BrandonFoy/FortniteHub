@@ -90,13 +90,14 @@ Post
 
 .posts li .logo {
     flex-basis: 15%;
-    padding-right: 40px;
+    padding-right: 100px;
 }
 
 .posts li .logo img {
-    width: 100%;
-    height: 100%;
+    width: 280%;
+    height: 80%;
     opacity: 100%;
+    
 }
 
 .posts li .name_body {
@@ -137,7 +138,6 @@ Post Likes
     margin: 40px 0 0;
     padding: 40px 0 0;
     font-size: 18px;
-    border-top: 10px dashed #eee;
     text-align: center;
 }
 .like-content span {
