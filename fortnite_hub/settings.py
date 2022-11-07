@@ -126,10 +126,10 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-cloudinary.config( 
-  cloud_name = "dk5qysnfo", 
-  api_key = "231916954628466", 
-  api_secret = "LppuyCkIaRYw4UuBQlU9XM2_zvI" 
+cloudinary.config(
+    cloud_name="dk5qysnfo",
+    api_key="231916954628466",
+    api_secret="LppuyCkIaRYw4UuBQlU9XM2_zvI"
 )
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field

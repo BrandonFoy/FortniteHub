@@ -14,10 +14,11 @@
     {% load static %}
     <section class="content">
         <section class="post_form">
-          <form action="/" method="POST">
+          <form action="/edit/{{ post.id }}/" method="POST" >
             {% csrf_token %}
-            <textarea name="body" placeholder={{post.body}} ></textarea>
-            <input type="submit" value="Post" />
+            <input type="text" name="name" style ='display:none'  value="{{post.name}}" placeholder="Name" required />
+            <textarea name="body" placeholder="What's Happening"/ >{{ post.body }}</textarea>
+            <input type="submit" value="Update" />
           </form>
         </section>
   </body>
