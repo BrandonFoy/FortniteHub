@@ -6,6 +6,8 @@
       {% csrf_token %}
       <input type="text" name="name" placeholder="Name" required />
       <textarea name="body" placeholder="Tell us anything!" required></textarea>
+      <p enctype = "multipart/form-data" >
+        <p>Upload File: <input type = "file" name = "filename" /></p>
       <input type="submit" value="Post" />
     </form>
   </section>
