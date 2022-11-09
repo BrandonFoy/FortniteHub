@@ -177,3 +177,7 @@ Post Likes
   0%   { transform: scale(30); }
   100% { transform: scale(1); }
 }
+
+.name_body p {
+    position: contain;
+}
