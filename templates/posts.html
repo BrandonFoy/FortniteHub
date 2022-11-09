@@ -11,7 +11,7 @@
       <input type="submit" value="Post" />
     </form>
   </section>
-
+  
   <section class="posts">
     <ul>
       {% for post in posts %} 
@@ -30,12 +30,12 @@
           <p>{{ post.body }}</p>
           <img src='{{post.image.url}}' />
           <div class="like-content">
-            <h1>{{post.likecount}}</h1>
             <a href='/like/{{post.id}}/'>
             <button class="btn-secondary like-review">
               <i class="fa fa-heart" aria-hidden="true"></i> Like
             </button> 
-          </a>           
+            </a> 
+            <h1>{{post.likecount}}</h1>          
           </div>
         </div>
       </li> 

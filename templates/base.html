@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="static/img/OIP.png" type="image/x-icon">
+    <link rel="icon" href="static/img/OIP.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fortnite Gamers Hub</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
-    <div id="head">
-      <H1>Fortnite Gamers Hub</H1>
-      
-        </button> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <div class="main-logo" >
+      <img src="{% static 'img/logo.png' %}" />
+      <h1>Fortnite Gamers Hub</h1>
+    </div>
   </head>
   <body>
     {%block content%} {{content}} {% endblock %}
