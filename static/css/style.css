@@ -84,9 +84,12 @@ Post
     
 }
 .name_body .post_image{
-    width:50px;
-    height: 50px;
+    width: 80%;
+    
 
+}
+.name_body .post_image .post-img{
+    width: 100%;
 }
 
 .posts li .menu_icon {
