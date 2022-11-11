@@ -13,21 +13,20 @@ html, body {
     
 .main-logo img {
     block-size: 100px;
-    align-content: center;
 }
 
 .main-logo {
-    text-align: center;
     color: rgb(255, 238, 0);
     font-weight: bolder;
     font-size: larger;
-    display: flex;
-    align-items: center;
     margin-bottom: 10px;
     margin-top: 10px;
-    margin-left: 118px;
-    margin-right: 118px;
-    border: 1px solid white;
+    flex-direction: row;
+    display: flex;
+    justify-content: center !important;
+    
+    
+    
 }
 
 .content {
@@ -37,8 +36,8 @@ html, body {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-top: 1px solid #ccc;
-    opacity: 0.75;
     background-color: rgb(71, 71, 71);
+    opacity: 80%;
 }
 
 /*
@@ -49,6 +48,7 @@ Post
     padding: 20px 40px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
+    
 }
 
 .post_form input {
@@ -64,8 +64,13 @@ Post
     border: 1px solid  #ccc;
 }
 
+.post_form p {
+    color: #ccc;
+}
+
 .posts ul {
     padding: 0;
+    display: contain;
 }
 
 .posts li {
@@ -76,6 +81,11 @@ Post
     list-style: none; 
     border-top: 1px solid #ccc;
     background-color: rgb(71, 71, 71);
+    
+}
+.name_body .post_image{
+    width:50px;
+    height: 50px;
 
 }
 
@@ -104,21 +114,18 @@ Post
 }
 
 .posts li .logo {
-    flex-basis: 15%;
-    margin: 10px;
+    flex-basis: 15% !important;
 }
 
 .posts li .logo img {
-    width: 100%;
-    height: 15%;
-    opacity: 100%;
-    justify-content:start;
+    width: 100% !important;
+    height: 15% !important;
+    opacity: 100% !important;
+    justify-content:start !important;
 }
 
 .posts li .name_body {
     flex-basis: 100%;
-    
-    
 }
 
 .posts li .name_body .name {
@@ -211,5 +218,16 @@ Post Likes
 
 .name_body p {
     position: contain;
+    
+}
+
+/******
+EDIT
+******/
+
+.main-header {
+    color:rgb(255, 238, 0);
+    font-size: 30px;
+    text-align: center;
     
 }

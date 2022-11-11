@@ -1,27 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% load static %}
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="{% static 'img/OIP.png' %}" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fortnite Gamers Hub Edit Page</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
-    <div id="head">
-      <H1>Edit Your Message Here</H1>
-  </head>
-  <body>
-    {% load static %}
-    <section class="content">
-        <section class="post_form">
-          <form action="/edit/{{ post.id }}/" method="POST" >
-            {% csrf_token %}
-            <input type="text" name="name" style ='display:none'  value="{{post.name}}/>" placeholder="Name" required />
-            <textarea name="body" placeholder="What's Happening"/ >{{ post.body }} </textarea>
-            <input type="submit" value="Update" />
-          </form>
-        </section>
-  </body>
-</html>
+{% extends "base.html" %}{% block content %}{% load static %}
 
+<section class="content">
+  <section class="main-header">
+    <h1>EDIT</h1>
+  </section>
+  <section class="post_form">
+    <div class="primary"></div>
+
+    <form
+      action="/edit/{{post.id}}/"
+      method="POST"
+      enctype="multipart/form-data"
+      class="forms"
+    >
+      {% csrf_token %}
+      <input
+        type="text"
+        value="{{post.name}}"
+        name="name"
+        placeholder="Name"
+        required
+      />
+      <input id="textarea" name="body" value="{{post.body}}" />
+
+      {% if post.image.url %}
+      <img
+        src="{{post.image.url}}"
+        alt="image"
+        style="width: 100%; height: 300px; object-fit: contain"
+      />
+
+      {% endif %}
+      <p>Upload File: <input type="file" name="image" /></p>
+      <input type="submit" value="Update" />
+      <a href="/"> <input id="cancel" value="Cancel" /></a>
+    </form>
+    {% endblock %}
+  </section>
+</section>

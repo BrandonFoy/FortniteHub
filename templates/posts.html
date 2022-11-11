@@ -21,14 +21,16 @@
           <a href="/delete/{{ post.id }}/">Delete</a> <br>
           <a href="/edit/{{ post.id }}/">Edit</a>
         </div>
-        <div class="logo"/>
+        <div class="logo">
           {% load static %} <img src="{% static 'img/user.png' %}" />
         </div>
         <div class="name_body">
           <div class="name">{{ post.name }}</div>
           <div class="datetime">{{ post.created_at }}</div>
           <p>{{ post.body }}</p>
-          <img src='{{post.image.url}}' />
+          <div class="post_image">
+          <img src='{{post.image.url}}'/>
+          </div>
           <div class="like-content">
             <a href='/like/{{post.id}}/'>
             <button class="btn-secondary like-review">
